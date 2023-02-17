@@ -25,9 +25,14 @@ function optimizeimg() {
     .pipe(dest("dist/images"));
 }
 
-// html
-async function buildhtml() {
+// copy html
+function buildhtml() {
   return src("index.html").pipe(dest("dist"));
+}
+
+// copy fonts
+function copyFonts() {
+  return src("src/assets/fonts/*").pipe(dest("dist/fonts"));
 }
 
 // watch
@@ -37,4 +42,4 @@ function watchTask() {
   watch("index.html", buildhtml);
 }
 
-export default series(compilescss, optimizeimg, watchTask);
+export default series(compilescss, optimizeimg, copyFonts, watchTask);

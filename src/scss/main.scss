@@ -1,5 +1,68 @@
+@import 'variables';
+@import 'fonts';
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
+
+html {
+  font-size: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+a:link, a:visited {
+  color: $text-light;
+  text-decoration: none;
+}
+
+.container {
+  width: 75rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: rgba(16, 16, 29, 0.9);
+
+  &__logo {
+    font-size: 1.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  .container {
+    display: flex;
+    height: 6.25rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 3.75rem;
+    color: $text-light;
+    font-weight: normal;
+    text-transform: uppercase;
+  }
+}
+
+.hero {
+  padding: 12.5rem 0;
+
+  &__title {
+    color: $accent;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+} 
