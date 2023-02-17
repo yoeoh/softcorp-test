@@ -1,0 +1,28 @@
+@import 'variables';
+
+.hero {
+  padding: 12.5rem 0;
+  background-image: url('/images/hero_bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  &__title {
+    color: $text-dark;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  &__text {
+    margin-bottom: 5rem;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+  }
+} 

@@ -1,0 +1,45 @@
+@import 'variables';
+
+.header {
+  background-color: rgba(16, 16, 29, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  &__logo {
+    font-size: 1.75rem;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $text-light;
+
+    span {
+      font-family: 'Raleway', sans-serif;
+      color: $accent;
+    }
+  }
+
+  .container {
+    display: flex;
+    height: 6.25rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 3.75rem;
+    color: $text-light;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    li {
+      color: $text-light;
+
+      &:hover {
+        color: $accent;
+      }
+    }
+  }
+}

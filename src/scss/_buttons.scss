@@ -1,0 +1,25 @@
+@import 'variables';
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  align-items: center;
+  width: 11.5rem;
+  height: 3rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+
+  &_primary {
+    background-color: $button-background-primary;
+    border-color: $button-border-primary;
+    color: $button-text-primary;
+  }
+
+  &_accent {
+    background-color: $accent;
+    border-color: $button-border-accent;
+    color: $button-text-accent;
+  }
+}
