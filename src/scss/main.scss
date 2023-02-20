@@ -4,6 +4,13 @@
 
 @import 'header';
 @import 'hero';
+@import 'order';
+@import 'schema';
+@import 'footer';
+
+html {
+  background-color: $background;
+}
 
 .container {
   width: 75rem;

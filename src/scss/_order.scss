@@ -1,0 +1,30 @@
+@import 'variables';
+
+.order {
+  background-image: url('/images/content_bg.jpg');
+  background-color: $background;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 7.5rem;
+  padding-bottom: 9.375rem;
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    color: $text-light;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: center;
+
+    span {
+      color: $accent;
+    }
+  }
+
+  &__subtitle {
+    color: $text-gray;
+    text-align: center;
+    font-size: 1.125rem;
+    margin-bottom: 5rem;
+  }
+}

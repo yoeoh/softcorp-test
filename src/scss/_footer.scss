@@ -1,0 +1,75 @@
+@import 'variables';
+
+.footer {
+  background-color: $footer_background;
+  color: $text-light;
+  font-size: 0.8125rem;
+
+  .container {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__divider {
+    border-left: 1px solid $text-light;
+    width: 0;
+    height: 1rem;
+    margin: 0 1.5rem;
+  }
+
+  &__payments {
+    display: flex;
+    gap: 2rem;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: $text-gray;
+
+    &-item {
+      height: 1.25rem;
+      display: flex;
+      align-items: center;
+      padding-left: 1.75rem;
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      &-qiwi {
+        background-image: url('/images/qiwi_icon.png');
+      }
+
+      &-yandex {
+        background-image: url('/images/yandex_icon.png');
+      }
+
+      &-webmoney {
+        background-image: url('/images/webmoney_icon.png');
+      }
+    }
+  }
+
+  &__socials {
+    display: flex;
+    gap: 2rem;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    color: $text-light;
+
+    &-item {
+      height: 1.25rem;
+      display: flex;
+      align-items: center;
+      padding-left: 1.75rem;
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      &-email {
+        background-image: url('/images/email_icon.png');
+      }
+
+      &-vk {
+        background-image: url('/images/vk_icon.png');
+      }
+    }
+  }
+}
