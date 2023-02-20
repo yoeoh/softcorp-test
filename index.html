@@ -65,27 +65,96 @@
 
     <section class="order">
       <div class="container">
-        <h2 class="order__title">Оформление Заказа</h2>
+        <h2 class="order__title">Оформление <span>Заказа</span></h2>
 
         <p class="order__subtitle">
           Перед заполнением формы ознакомьтесь с нашей схемой работы!
         </p>
 
-        <div class="order__schema"></div>
+        <div class="schema">
+          <div class="schema__item">
+            <div class="schema__item-icon schema__item-icon-zoom"></div>
+            <div class="schema__item-text">Lorem ipsum dolor sit amet</div>
+          </div>
+          <div class="schema__item">
+            <div class="schema__item-icon schema__item-icon-percent"></div>
+            <div class="schema__item-text">Сonsecteturadipiscing elit</div>
+          </div>
+          <div class="schema__item">
+            <div class="schema__item-icon schema__item-icon-file"></div>
+            <div class="schema__item-text">Sed do eiusmod tempor</div>
+          </div>
+          <div class="schema__item">
+            <div class="schema__item-icon schema__item-icon-mail"></div>
+            <div class="schema__item-text">Esse cillum dolore eu fugiat</div>
+          </div>
+          <div class="schema__item">
+            <div class="schema__item-icon schema__item-icon-money"></div>
+            <div class="schema__item-text">
+              Excepteur sint occaecat cupidatat non proident
+            </div>
+          </div>
+        </div>
 
-        <form class="order__form">button</form>
+        <form class="order__form">
+          <select name="system-type">
+            <option disabled selected>Выберите тип системы</option>
+            <option value="1">Lorem, ipsum.</option>
+            <option value="2">Non, harum.</option>
+            <option value="3">Minus, sapiente.</option>
+            <option value="4">Odio, maxime.</option>
+            <option value="5">Cumque, quisquam.</option>
+            <option value="6">Similique, ea?</option>
+            <option value="7">Laudantium, id.</option>
+            <option value="8">Quia, deleniti.</option>
+            <option value="9">Dicta, quaerat.</option>
+          </select>
+
+          <input type="email" name="email" placeholder="Ваш e-mail" />
+          <input type="text" name="name" placeholder="Ваше имя" />
+
+          <input type="range" name="range" />
+
+          <input type="file" name="file" />
+
+          <button type="submit">Отправить</button>
+        </form>
       </div>
     </section>
 
     <footer class="footer">
       <div class="container">
         <div class="footer__copyright">
-          © 2018 «LoremIpsum.net» Все права защищены.
+          © 2018 «LOREMIPSUM.NET» Все права защищены.
         </div>
 
-        <div class="footer__payments">Qiwi wallet Yandex Money Web Money</div>
+        <div class="footer__divider"></div>
 
-        <div class="footer__socials">info@ipsum228.com Мы вконтакте</div>
+        <div class="footer__payments">
+          <div class="footer__payments-item footer__payments-item-qiwi">
+            Qiwi wallet
+          </div>
+
+          <div class="footer__payments-item footer__payments-item-yandex">
+            Yandex Money
+          </div>
+
+          <div class="footer__payments-item footer__payments-item-webmoney">
+            Web Money
+          </div>
+        </div>
+
+        <div class="footer__divider"></div>
+
+        <div class="footer__socials">
+          <div class="footer__socials-item footer__socials-item-email">
+            info@ipsum228.com
+          </div>
+
+          <div class="footer__socials-item footer__socials-item-vk">
+            Мы вконтакте
+          </div>
+        </div>
       </div>
     </footer>
   </body>
