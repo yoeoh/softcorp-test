@@ -3,15 +3,15 @@ const { src, dest, watch, series } = gulp;
 
 import prefix from "gulp-autoprefixer";
 import minify from "gulp-clean-css";
-import imagemin from "gulp-imagemin";
+import imagemin, { gifsicle, mozjpeg, optipng, svgo } from "gulp-imagemin";
 
 import gulpSass from "gulp-sass";
 import defaultSass from "sass";
 const sass = gulpSass(defaultSass);
 
 // scss
-function compilescss() {
-  return src("src/scss/*.scss")
+function compileCss() {
+  return src(["src/scss/*.scss"])
     .pipe(sass.sync())
     .pipe(prefix())
     .pipe(minify())
@@ -19,14 +19,14 @@ function compilescss() {
 }
 
 // images
-function optimizeimg() {
+function optimizeImg() {
   return src("src/assets/images/*.{jpg,png}")
-    .pipe(imagemin())
+    .pipe(imagemin([optipng({ optimizationLevel: 5 })]))
     .pipe(dest("dist/images"));
 }
 
 // copy html
-function buildhtml() {
+function buildHtml() {
   return src("index.html").pipe(dest("dist"));
 }
 
@@ -35,11 +35,24 @@ function copyFonts() {
   return src("src/assets/fonts/*").pipe(dest("dist/fonts"));
 }
 
-// watch
-function watchTask() {
-  watch("src/scss/*.scss", compilescss);
-  watch("src/assets/images/*.{jpg,png}", optimizeimg);
-  watch("index.html", buildhtml);
+// scripts
+function buildScripts() {
+  return src("src/scripts/*.js").pipe(dest("dist/scripts"));
 }
 
-export default series(compilescss, optimizeimg, copyFonts, watchTask);
+// watch
+function watchTask() {
+  watch("src/scss/*.scss", compileCss);
+  watch("src/assets/images/*.{jpg,png}", optimizeImg);
+  watch("src/scripts/*.js", buildScripts);
+  watch("index.html", buildHtml);
+}
+
+export default series(
+  compileCss,
+  optimizeImg,
+  copyFonts,
+  buildScripts,
+  buildHtml,
+  watchTask
+);

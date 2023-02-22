@@ -1,12 +1,16 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font: inherit;
 }
 
 html {
   font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
 
 ul {

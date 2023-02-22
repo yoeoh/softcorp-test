@@ -97,8 +97,8 @@
         </div>
 
         <form class="order__form">
-          <select name="system-type">
-            <option disabled selected>Выберите тип системы</option>
+          <select required class="input" id="nice-select" name="system-type">
+            <option disabled selected value="">Выберите тип системы</option>
             <option value="1">Lorem, ipsum.</option>
             <option value="2">Non, harum.</option>
             <option value="3">Minus, sapiente.</option>
@@ -110,14 +110,31 @@
             <option value="9">Dicta, quaerat.</option>
           </select>
 
-          <input type="email" name="email" placeholder="Ваш e-mail" />
-          <input type="text" name="name" placeholder="Ваше имя" />
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="Ваш e-mail"
+            required
+          />
 
-          <input type="range" name="range" />
+          <input
+            class="input"
+            type="text"
+            name="name"
+            placeholder="Ваше имя"
+            required
+          />
 
+          <input class="order__form-range" type="range" name="range" />
           <input type="file" name="file" />
 
-          <button type="submit">Отправить</button>
+          <button
+            class="button button_accent button_big order__form-button-submit"
+            type="submit"
+          >
+            Отправить
+          </button>
         </form>
       </div>
     </section>
@@ -157,5 +174,12 @@
         </div>
       </div>
     </footer>
+
+    <script
+      defer
+      type="module"
+      src="./modules/nice-select/js/nice-select2.js"
+    ></script>
+    <script defer type="module" src="./scripts/main.js"></script>
   </body>
 </html>
