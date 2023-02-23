@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./css/resets.css" />
+    <link rel="stylesheet" href="./css/nice-select2.css" />
+    <link rel="stylesheet" href="./css/simplebar.min.css" />
     <link rel="stylesheet" href="./css/main.css" />
 
-    <script defer type="module" src="./scripts/main.js"></script>
+    <script defer src="./scripts/nice-select2.js"></script>
+    <script defer src="./scripts/simplebar.min.js"></script>
+    <script defer src="./scripts/app.js"></script>
 
     <title>SoftCorp test layout</title>
   </head>
@@ -99,7 +103,12 @@
         </div>
 
         <form class="order__form">
-          <select required class="input" id="nice-select" name="system-type">
+          <select
+            required
+            id="order-select-dropdown"
+            name="system-type"
+            class="input wide"
+          >
             <option disabled selected value="">Выберите тип системы</option>
             <option value="1">Lorem, ipsum.</option>
             <option value="2">Non, harum.</option>
@@ -128,8 +137,26 @@
             required
           />
 
-          <input class="order__form-range" type="range" name="range" />
-          <input type="file" name="file" />
+          <div class="order__form-range range">
+            <div class="range__top">
+              <div class="range__top-left">Lorem ipsum dolor sit amet.</div>
+              <div class="range__top-right">75%</div>
+            </div>
+            <input
+              class="range__input"
+              type="range"
+              name="range"
+              min="0"
+              step="1"
+              max="100"
+            />
+          </div>
+
+          <label for="file-input" class="file">
+            <img src="./images/order_attachment_icon.png" alt="" />
+            <span class="file__text">Прикрепить файл</span>
+            <input type="file" name="file-input" id="file-input" />
+          </label>
 
           <button
             class="button button_accent button_big order__form-button-submit"
