@@ -8,6 +8,10 @@
   padding-top: 7.5rem;
   padding-bottom: 9.375rem;
 
+  @media screen and (max-width: 576px) {
+    padding: 4rem 0;
+  }
+
   &__title {
     font-size: 2.25rem;
     font-weight: 600;
@@ -15,6 +19,13 @@
     text-transform: uppercase;
     margin-bottom: 2rem;
     text-align: center;
+
+    @media screen and (max-width: 576px) {
+      font-size: 2rem; 
+      text-align: center;
+      padding: 0 1rem;
+      margin-bottom: 3rem;
+    }
 
     span {
       color: $accent;
@@ -26,6 +37,10 @@
     text-align: center;
     font-size: 1.125rem;
     margin-bottom: 5rem;
+
+    @media screen and (max-width: 576px) {
+      margin-bottom: 2rem; 
+    }
   }
 
   &__form {
@@ -33,13 +48,25 @@
     gap: 2rem;
     grid-template-columns: repeat(3, 1fr);
 
+    @media screen and (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+
     &-range {
       grid-column: 1 / span 2;
+
+      @media screen and (max-width: 576px) {
+        grid-column: auto;
+      }
     }
 
     &-button-submit {
       margin-top: 1rem;
       grid-column: 2 / span 1;
+
+      @media screen and (max-width: 576px) {
+        grid-column: auto;
+      }
     }
   }
 }

@@ -25,6 +25,7 @@
 
   &__input {
     -webkit-appearance: none;
+    appearance: none;
     height: 0.375rem;
     border: 1px solid $input-border-primary;
     background-color: $input-background-range;

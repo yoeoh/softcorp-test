@@ -15,6 +15,10 @@
     text-transform: uppercase;
     color: $text-light;
 
+    @media screen and (max-width: 576px) {
+      font-size: 1.5rem;
+    }
+
     span {
       font-family: 'Raleway', sans-serif;
       color: $accent;
@@ -23,7 +27,7 @@
 
   .container {
     display: flex;
-    height: 6.25rem;
+    height: $header-height;
     justify-content: space-between;
     align-items: center;
   }
@@ -35,6 +39,10 @@
     font-weight: 600;
     text-transform: uppercase;
     font-size: 0.8125rem;
+
+    @media screen and (max-width: 576px) {
+      display: none;
+    }
 
     li {
       color: $text-light;
