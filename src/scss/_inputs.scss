@@ -18,7 +18,7 @@
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
     color: $text-light;
     font-size: 1.125rem;
   }
@@ -27,7 +27,7 @@
     -webkit-appearance: none;
     height: 0.375rem;
     border: 1px solid $input-border-primary;
-    background-color: $input-background-primary;
+    background-color: $input-background-range;
     border-radius: 1rem;
 
     &::-webkit-slider-thumb {
@@ -55,7 +55,7 @@
   border: 2px solid $accent;
   background-color: $button-background-primary;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 600;
   color: #272733;
   font-size: 0.9375rem;
   border-radius: 0.1875rem;
