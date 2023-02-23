@@ -19,9 +19,11 @@ html {
   margin: 0 auto;
 }
 
-.test {
-  max-height: 100px;
-  background-color: red;
-  overflow: auto;
+.simplebar-scrollbar::before {
+  background-color: $accent;
+}
+
+.simplebar-track {
+  background-color: #3D4050;
 }
 

@@ -46,7 +46,13 @@ $arrow_color: $gray !default;
     border-color: darken($gray_light, 5%);
   }
   &:active, &:focus {
-    border-color: $primary_light;
+    border-color: transparent;
+    background-color: #3D4050;
+    color: #fff;
+
+    &:after {
+      border-color: #fff;
+    }
   }
   // Arrow
   &:after { 
@@ -90,8 +96,8 @@ $arrow_color: $gray !default;
   &.wide {
     width: 100%;
     .nice-select-dropdown {
-      left: 0 !important;
-      right: 0 !important;
+      left: -1px !important;
+      right: -1px !important;
     }
   }
   &.right {
@@ -116,9 +122,10 @@ $arrow_color: $gray !default;
   }
 
   .nice-select-dropdown{
-    margin-top: 4px;
-    background-color: #fff;
-    border-radius: $input_border_radius;
+    // margin-top: 4px;
+    background-color: #10101D;
+    color: #fff;
+    border-radius: 0 0 4px 4px;
     box-shadow: 0 0 0 1px rgba($gray_dark, .11);
 
     pointer-events: none;
@@ -133,7 +140,7 @@ $arrow_color: $gray !default;
 
   // List and options
   .list {
-    border-radius: $input_border_radius;
+    border-radius: 0 0 4px 4px;
     box-sizing: border-box;
     overflow: hidden;
     padding: 0;
@@ -155,7 +162,8 @@ $arrow_color: $gray !default;
     text-align: left;
     transition: all 0.2s;
     &:hover, &.focus, &.selected.focus { 
-      background-color: $gray_lighter;
+      background-color: transparent;
+      color: #3E9CDC;
     }
     &.selected { 
       font-weight: bold;
