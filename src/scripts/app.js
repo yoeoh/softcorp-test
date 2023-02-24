@@ -4,4 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   new SimpleBar(document.querySelector(".nice-select .list"), {
     autoHide: false,
   });
+
+  const rangeInput = document.getElementById("form-range-input");
+  const rangeValue = document.getElementById("form-range-value");
+
+  rangeInput.addEventListener("input", (e) => {
+    const value = e.target.value;
+    rangeValue.innerText = `${value}%`;
+  });
 });

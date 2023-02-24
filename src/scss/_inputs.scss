@@ -26,23 +26,38 @@
   &__input {
     -webkit-appearance: none;
     appearance: none;
-    height: 0.375rem;
+    height: 0.5rem;
     border: 1px solid $input-border-primary;
     background-color: $input-background-range;
     border-radius: 1rem;
 
-    &::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      width: 1.5rem;
-      height: 1.5rem;
+    &::-moz-range-thumb {
+      width: 1.25rem;
+      height: 1.25rem;
       border-radius: 50%;
       background-color: $accent;
       border: 3px solid $schema-border;
-      z-index: 2;
+      cursor: pointer;
 
       &:hover {
         cursor: pointer;
-        background-color: lighten($accent, 10%);
+        background-color: lighten($accent, 20%);
+      }
+    }
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%; 
+      background-color: $accent;
+      border: 3px solid $schema-border;
+      cursor: pointer;
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($accent, 20%);
       }
     }
   }
