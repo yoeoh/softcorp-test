@@ -9,6 +9,8 @@
 @import 'schema';
 @import 'footer';
 
+@import 'simplebar';
+
 html {
   background-color: $background;
 }
@@ -18,13 +20,5 @@ html {
   min-width: 20rem;
   padding: 0 1rem;
   margin: 0 auto;
-}
-
-.simplebar-scrollbar::before {
-  background-color: $accent;
-}
-
-.simplebar-track {
-  background-color: #3D4050;
 }
 

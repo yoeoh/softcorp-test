@@ -123,10 +123,13 @@ $arrow_color: $gray !default;
 
   .nice-select-dropdown{
     // margin-top: 4px;
-    background-color: #10101D;
+    background-color: #272733;
     color: #fff;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 0 0 1px rgba($gray_dark, .11);
+
+    border: 1px solid #3D4050;
+    // border-top: 0;
 
     pointer-events: none;
     position: absolute;
