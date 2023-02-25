@@ -40,8 +40,16 @@
     align-items: center;
   }
 
-  &__menu {
+  &__right {
+    height: 100%;
     display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    height: 80%;
+    display: flex;
+    align-items: center;
     gap: 3.75rem;
     color: $text-light;
     font-weight: 600;
@@ -53,10 +61,19 @@
     }
 
     li {
-      color: $text-light;
+      height: 100%;
+      display: flex;
+      align-items: center;
 
-      &:hover {
-        color: $accent;
+      a {
+        display: flex;
+        align-items: center;
+        color: $text-light;
+        height: 100%;
+
+        &:hover {
+          color: $accent;
+        }
       }
     }
   }

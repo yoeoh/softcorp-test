@@ -54,7 +54,7 @@ function compileCss() {
 
 // images
 function optimizeImg() {
-  return src("src/assets/images/*.{jpg,png}")
+  return src("src/assets/images/*.{jpg,png,ico}")
     .pipe(
       imagemin([optipng({ optimizationLevel: 5 }), mozjpeg({ quality: 75 })])
     )
