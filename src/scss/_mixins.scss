@@ -1,0 +1,8 @@
+@mixin fluidFontSize($min, $max, $small: false) {
+  @if $small {
+    font-size: clamp($min, 2vw + 0.25rem, $max);
+  } @else {
+    font-size: clamp($min, 4vw + 0.25rem, $max)
+  }
+  
+}

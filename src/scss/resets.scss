@@ -5,7 +5,10 @@
 * {
   margin: 0;
   padding: 0;
-  font: inherit;
+}
+
+input, textarea, button {
+  font: inherit
 }
 
 html {
