@@ -15,15 +15,19 @@
   }
 
   &__logo {
-    @include fluidFontSize(1.5rem, 1.75rem, $small: true);
-    font-family: 'Raleway', sans-serif;
-    font-weight: 800;
-    text-transform: uppercase;
-    color: $text-light;
+    display: block;
+    flex-basis: 246px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 80%;
+    background-image: url("../images/logo.svg");
+    background-position: center left;
+    background-repeat: no-repeat;
 
-    span {
-      font-family: 'Raleway', sans-serif;
-      color: $accent;
+    @media screen and (max-width: 576px) {
+      flex-basis: 60%;
+      max-width: 246px;
+      background-size: contain;
     }
   }
 

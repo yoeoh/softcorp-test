@@ -54,9 +54,13 @@ function compileCss() {
 
 // images
 function optimizeImg() {
-  return src("src/assets/images/*.{jpg,png,ico}")
+  return src("src/assets/images/*.{jpg,png,ico,svg}")
     .pipe(
-      imagemin([optipng({ optimizationLevel: 5 }), mozjpeg({ quality: 75 })])
+      imagemin([
+        optipng({ optimizationLevel: 5 }),
+        mozjpeg({ quality: 75 }),
+        svgo(),
+      ])
     )
     .pipe(dest("dist/images"));
 }
