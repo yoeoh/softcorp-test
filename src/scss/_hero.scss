@@ -1,6 +1,7 @@
 .hero {
   padding: 13.5rem 0 12.5rem;
   background-repeat: no-repeat;
+  background-color: #f6f7f9;
 
   @media screen and (max-width: 576px) {
     padding: 4rem 0;
@@ -16,11 +17,13 @@
       linear-gradient(to bottom, #f7f8fa 55%, transparent),
       url("../images/hero_bg_mobile.jpg");
     background-position: center top, center top, center bottom;
+    background-size: auto, auto, auto 50%;
   }
 
   @media screen and (min-width: 769px) {
     background-image: url("../images/hero_bg.jpg");
     background-position: center top;
+    background-size: cover;
   }
 
   &__content {
@@ -37,7 +40,7 @@
 
     @media screen and (max-width: 576px) {
       margin-bottom: 3rem;
-      text-align: center;
+      // text-align: center;
     }
 
     span {
@@ -82,8 +85,17 @@
 
     @media screen and (max-width: 576px) {
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
       align-items: center;
+
+      .button {
+        width: 80%;
+        letter-spacing: 2px;
+        // font-weight: 600;
+        height: auto;
+        padding: 0.75rem 0;
+        font-size: 1rem;
+      }
     }
   }
 }
