@@ -2,11 +2,19 @@
 
 .header {
   background-color: rgba(16, 16, 29, 0.9);
-  position: fixed;
+  height: $header-height;
+  position: absolute;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  transition: all 0.1s ease-out;
+
+  &__compact {
+    position: fixed;
+    height: $header-compact;
+    transition: all 0.1s ease-in;
+  }
 
   &__logo {
     font-size: 1.75rem;
@@ -27,7 +35,7 @@
 
   .container {
     display: flex;
-    height: $header-height;
+    height: 100%;
     justify-content: space-between;
     align-items: center;
   }
