@@ -10,6 +10,10 @@
     flex-direction: column;
   }
 
+  @media screen and (min-width: 577px) and (max-width: 1200px) {
+    justify-content: center;
+  }
+
   &__item {
     flex-basis: 13rem;
     flex-grow: 0;
@@ -18,6 +22,25 @@
     flex-direction: column;
     align-items: center;
     word-wrap: break-word;
+    z-index: 1;
+
+    &:hover {
+      .schema__item-icon {
+        box-shadow: 0 0 10px 5px $schema-border;
+        transition: 0.2s all ease-in;
+      }
+
+      .schema__item-text {
+        color: lighten($accent, 15%);
+        transition: 0.2s all ease-in;
+      }
+    }
+
+    &:last-child {
+      .schema__item-icon::before {
+        display: none;
+      }
+    }
 
     @media screen and (max-width: 576px) {
       flex-basis: 0px;
@@ -32,21 +55,38 @@
       background-position: center center;
       background-repeat: no-repeat;
       margin-bottom: 1.25rem;
+      transition: 0.2s all ease-out;
+      position: relative;
+
+      &::before {
+        content: "";
+        background-image: url("../images/order_schema_dots.png");
+        position: absolute;
+        right: calc(-111px - 1.25rem);
+        top: calc(50% - 3px);
+        width: 111px;
+        height: 6px;
+        z-index: -1;
+
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
+      }
 
       &-zoom {
-        background-image: url('../images/order_item1.png');
+        background-image: url("../images/order_item1.png");
       }
       &-percent {
-        background-image: url('../images/order_item2.png');
+        background-image: url("../images/order_item2.png");
       }
       &-file {
-        background-image: url('../images/order_item3.png');
+        background-image: url("../images/order_item3.png");
       }
       &-mail {
-        background-image: url('../images/order_item4.png');
+        background-image: url("../images/order_item4.png");
       }
       &-money {
-        background-image: url('../images/order_item5.png');
+        background-image: url("../images/order_item5.png");
       }
     }
 
@@ -55,6 +95,7 @@
       line-height: 1.25rem;
       color: $text-light;
       word-wrap: break-word;
+      transition: 0.2s all ease-out;
     }
   }
 }
