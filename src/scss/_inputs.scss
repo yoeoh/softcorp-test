@@ -48,7 +48,7 @@
       appearance: none;
       width: 1.5rem;
       height: 1.5rem;
-      border-radius: 50%; 
+      border-radius: 50%;
       background-color: $accent;
       border: 3px solid $schema-border;
       cursor: pointer;
@@ -93,5 +93,7 @@
 }
 
 #order-select-dropdown {
-  display: none;
+  width: 0;
+  height: 0;
+  position: absolute;
 }
