@@ -1,13 +1,22 @@
 .order {
-  background-image: url('../images/content_bg.jpg');
-  background-color: $background;
   background-repeat: no-repeat;
-  background-position: center center;
   padding-top: 7.5rem;
   padding-bottom: 9.375rem;
 
   @media screen and (max-width: 576px) {
     padding: 4rem 0;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-image: url("../images/content_bg_mobile.jpg");
+    background-position: center top;
+    background-color: #232230;
+  }
+
+  @media screen and (min-width: 769px) {
+    background-image: url("../images/content_bg.jpg");
+    background-color: $background;
+    background-position: center center;
   }
 
   &__title {
@@ -36,7 +45,7 @@
     margin-bottom: 5rem;
 
     @media screen and (max-width: 576px) {
-      margin-bottom: 2rem; 
+      margin-bottom: 2rem;
     }
   }
 
