@@ -25,7 +25,7 @@ function copyModulesJs() {
 function copyModulesCss() {
   const modules = ["node_modules/simplebar/dist/simplebar.min.css"];
 
-  return src(modules).pipe(dest("dist/css"));
+  return src(modules).pipe(dest("src/styles/libs"));
 }
 
 function buildScripts() {
@@ -36,7 +36,7 @@ function buildScripts() {
 }
 
 function compileCss() {
-  return src(["src/scss/*.scss"])
+  return src(["src/styles/*.scss"])
     .pipe(sass.sync())
     .pipe(prefix())
     .pipe(minify())
@@ -64,7 +64,7 @@ function copyFonts() {
 }
 
 function watchTask() {
-  watch("src/scss/*.scss", compileCss);
+  watch("src/styles/*.scss", compileCss);
   watch("src/assets/images/*.{jpg,png}", optimizeImg);
   watch("src/scripts/*.js", buildScripts);
   watch("src/index.html", copyHtml);

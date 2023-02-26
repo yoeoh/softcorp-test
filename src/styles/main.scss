@@ -1,3 +1,6 @@
+@use "sass:math";
+@import "resets";
+
 @import "variables";
 @import "mixins";
 @import "animations";
@@ -13,7 +16,12 @@
 @import "schema";
 @import "footer";
 
+// libs
+@import "./libs/simplebar.min.css";
+
+// libs customizations
 @import "simplebar";
+@import "nice-select2";
 
 html {
   background-color: $background;
