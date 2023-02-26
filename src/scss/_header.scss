@@ -80,18 +80,9 @@
     }
   }
 
-  &__burger {
-    &-button {
-      @media screen and (min-width: 769px) {
-        display: none;
-      }
-
-      &-active {
-        z-index: 1001;
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-      }
+  &__burger-button {
+    @media screen and (min-width: 769px) {
+      display: none;
     }
   }
 }

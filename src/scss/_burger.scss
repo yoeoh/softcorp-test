@@ -2,7 +2,7 @@
   display: none;
 
   &_visible {
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: rgba(0, 0, 0, 0.97);
     overflow: auto;
     color: white;
 
@@ -34,7 +34,7 @@
       height: 6rem;
       width: 100%;
 
-      animation: fadeInLeft 1.5s;
+      animation: fadeInRight 1.5s;
 
       a {
         display: flex;
@@ -56,7 +56,28 @@
   }
 
   &__button {
+    appearance: none;
+    border: 0;
+    background-color: transparent;
+
+    height: 2rem;
+    width: 2rem;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &-open {
+      background-image: url("../images/burger_menu_icon.png");
+    }
+
     &-close {
+      background-image: url("../images/burger_menu_close.png");
+
       position: absolute;
       top: 2rem;
       right: 2rem;
