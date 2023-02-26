@@ -1,34 +1,25 @@
 {
-  "name": "softcorp-test",
+  "name": "test-layout",
   "version": "1.0.0",
-  "description": "",
+  "description": "test task HTML-layout",
   "type": "module",
   "scripts": {
     "start": "gulp"
   },
-  "author": "",
+  "author": "yoeoh",
   "license": "ISC",
-  "homepage": "",
   "devDependencies": {
-    "@babel/core": "^7.21.0",
-    "@babel/preset-env": "^7.20.2",
-    "babel-loader": "^9.1.2",
-    "babel-plugin-module-resolver": "^4.1.0",
-    "babel-plugin-root-import": "^6.6.0",
-    "del": "^7.0.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^8.0.0",
     "gulp-sass": "^5.1.0",
-    "sass": "^1.58.2",
-    "terser-webpack-plugin": "^5.3.6",
-    "webpack": "^5.75.0",
-    "webpack-stream": "^7.0.0"
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.58.2"
   },
   "dependencies": {
-    "nice-select2": "^2.1.0",
-    "simplebar": "^6.2.1"
+    "nice-select2": "2.1.0",
+    "simplebar": "6.2.1"
   }
 }
