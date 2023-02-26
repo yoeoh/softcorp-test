@@ -55,8 +55,8 @@ function optimizeImg() {
     .pipe(dest("dist/images"));
 }
 
-function buildHtml() {
-  return src("index.html").pipe(dest("dist"));
+function copyHtml() {
+  return src("src/index.html").pipe(dest("dist"));
 }
 
 function copyFonts() {
@@ -67,7 +67,7 @@ function watchTask() {
   watch("src/scss/*.scss", compileCss);
   watch("src/assets/images/*.{jpg,png}", optimizeImg);
   watch("src/scripts/*.js", buildScripts);
-  watch("index.html", buildHtml);
+  watch("src/index.html", copyHtml);
 }
 
 export default series(
@@ -77,6 +77,6 @@ export default series(
   compileCss,
   optimizeImg,
   copyFonts,
-  buildHtml,
+  copyHtml,
   watchTask
 );
