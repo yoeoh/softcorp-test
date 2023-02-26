@@ -1,17 +1,19 @@
-@import 'variables';
-@import 'mixins';
+@import "variables";
+@import "mixins";
+@import "animations";
 
-@import 'fonts';
-@import 'buttons';
-@import 'inputs';
+@import "fonts";
+@import "buttons";
+@import "inputs";
 
-@import 'header';
-@import 'hero';
-@import 'order';
-@import 'schema';
-@import 'footer';
+@import "header";
+@import "burger";
+@import "hero";
+@import "order";
+@import "schema";
+@import "footer";
 
-@import 'simplebar';
+@import "simplebar";
 
 html {
   background-color: $background;
@@ -24,3 +26,10 @@ html {
   margin: 0 auto;
 }
 
+.body {
+  position: relative;
+}
+
+.fullscreen {
+  overflow: hidden;
+}

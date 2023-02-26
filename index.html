@@ -23,7 +23,7 @@
         <a class="header__logo" href="#"></a>
 
         <div class="header__right">
-          <ul class="header__menu">
+          <ul class="header__menu" id="header-menu">
             <li>
               <a href="#"> Бизнес </a>
             </li>
@@ -37,6 +37,10 @@
               <a href="#"> Оформить заказ </a>
             </li>
           </ul>
+
+          <button id="burger-menu-button" class="header__burger-button">
+            open
+          </button>
         </div>
       </div>
     </header>
@@ -206,5 +210,13 @@
         </div>
       </div>
     </footer>
+
+    <nav class="burger" id="burger-menu">
+      <button class="burger__button-close" id="burger-menu-close-button">
+        close
+      </button>
+
+      <ul class="burger__menu" id="burger-menu-list"></ul>
+    </nav>
   </body>
 </html>
