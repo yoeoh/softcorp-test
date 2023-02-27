@@ -20,13 +20,13 @@
   }
 }
 
-@keyframes fadeOut {
+@keyframes fadeIn {
   from {
-    opacity: 1;
+    opacity: 0;
   }
 
   to {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -36,4 +36,10 @@
 
 .animation-fadeinleft {
   animation: fadeInLeft 1.5s;
+}
+.animation-fadeinright {
+  animation: fadeInRight 1.5s;
+}
+.animation-fadein {
+  animation: fadeIn 1.5s;
 }

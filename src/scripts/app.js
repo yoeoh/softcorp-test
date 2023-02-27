@@ -91,7 +91,9 @@ document.addEventListener("DOMContentLoaded", () => {
         entry.target.classList.add("transparent");
 
         if (entry.isIntersecting) {
-          entry.target.classList.add("animation-fadeinleft");
+          const direction = entry.target.getAttribute("data-animated");
+
+          entry.target.classList.add(`animation-fadein${direction}`);
           entry.target.classList.remove("transparent");
           observer.unobserve(entry.target);
         }

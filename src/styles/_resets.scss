@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -7,13 +9,16 @@
   padding: 0;
 }
 
-input, textarea, button {
-  font: inherit
+input,
+textarea,
+button {
+  font: inherit;
 }
 
 html {
   font-size: 16px;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
 }
 
 ul {
