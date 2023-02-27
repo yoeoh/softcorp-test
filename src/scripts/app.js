@@ -107,4 +107,18 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedItemsArray.forEach((item) => {
     observer.observe(item);
   });
+
+  // schema
+  const schemaItems = Array.from(
+    document.getElementById("schema").getElementsByClassName("schema__item")
+  );
+
+  if (schemaItems.length > 5) {
+    schemaItems.forEach((item, index) => {
+      const itemIcon = item.querySelector(".schema__item-icon");
+      if ((index + 1) % 5 === 0) {
+        itemIcon.classList.add("nobefore");
+      }
+    });
+  }
 });

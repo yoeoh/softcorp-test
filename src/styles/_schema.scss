@@ -1,7 +1,7 @@
 .schema {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: center;
   gap: 2rem;
   margin-bottom: 5rem;
 
@@ -44,6 +44,12 @@
 
     @media screen and (max-width: 576px) {
       flex-basis: 0px;
+    }
+
+    .nobefore {
+      &::before {
+        display: none;
+      }
     }
 
     &-icon {
