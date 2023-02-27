@@ -44,13 +44,13 @@
     <section class="hero" id="hero">
       <div class="container">
         <div class="hero__content">
-          <h1 data-animated class="hero__title">
+          <h1 data-animated="left" class="hero__title">
             <span>Lorem ipsum</span> dolor sit
             <br />
             amet consectetur <span>adipiscing</span>
           </h1>
 
-          <div data-animated class="hero__text">
+          <div data-animated="right" class="hero__text">
             <h4 class="hero__subtitle">
               At vero eos et accusamus et iusto odio dignissimos ducimus!
             </h4>
@@ -72,32 +72,32 @@
 
     <main class="order">
       <div class="container">
-        <h2 data-animated class="order__title">
+        <h2 data-animated="left" class="order__title">
           Оформление <span>Заказа</span>
         </h2>
 
-        <p data-animated class="order__subtitle">
+        <p data-animated="right" class="order__subtitle">
           Перед заполнением формы ознакомьтесь с нашей схемой работы!
         </p>
 
-        <div data-animated class="schema">
-          <div class="schema__item">
+        <div data-animated="left" class="schema">
+          <div data-animated="left" class="schema__item">
             <div class="schema__item-icon schema__item-icon-zoom"></div>
             <div class="schema__item-text">Lorem ipsum dolor sit amet</div>
           </div>
-          <div class="schema__item">
+          <div data-animated="left" class="schema__item">
             <div class="schema__item-icon schema__item-icon-percent"></div>
             <div class="schema__item-text">Сonsecteturadipiscing elit</div>
           </div>
-          <div class="schema__item">
+          <div data-animated="left" class="schema__item">
             <div class="schema__item-icon schema__item-icon-file"></div>
             <div class="schema__item-text">Sed do eiusmod tempor</div>
           </div>
-          <div class="schema__item">
+          <div data-animated="left" class="schema__item">
             <div class="schema__item-icon schema__item-icon-mail"></div>
             <div class="schema__item-text">Esse cillum dolore eu fugiat</div>
           </div>
-          <div class="schema__item">
+          <div data-animated="left" class="schema__item">
             <div class="schema__item-icon schema__item-icon-money"></div>
             <div class="schema__item-text">
               Excepteur sint occaecat cupidatat non proident
@@ -105,7 +105,7 @@
           </div>
         </div>
 
-        <form data-animated class="order__form">
+        <form class="order__form" data-animated="left">
           <select
             required
             id="order-select-dropdown"
@@ -125,6 +125,7 @@
           </select>
 
           <input
+            data-animated="left"
             class="input"
             type="email"
             name="email"
@@ -133,6 +134,7 @@
           />
 
           <input
+            data-animated="left"
             class="input"
             type="text"
             name="name"
@@ -140,7 +142,7 @@
             required
           />
 
-          <div class="order__form-range range">
+          <div data-animated="left" class="order__form-range range">
             <div class="range__top">
               <div class="range__top-left">Lorem ipsum dolor sit amet.</div>
               <div class="range__top-right" id="form-range-value">75%</div>
@@ -157,7 +159,7 @@
             />
           </div>
 
-          <label for="file-input" class="file">
+          <label data-animated="left" for="file-input" class="file">
             <img
               width="18"
               height="21"
@@ -169,6 +171,7 @@
           </label>
 
           <button
+            data-animated="left"
             class="button button_accent button_big order__form-button-submit"
             type="submit"
           >
