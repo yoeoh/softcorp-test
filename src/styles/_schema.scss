@@ -38,6 +38,12 @@
       }
     }
 
+    &:nth-child(5n + 5) {
+      .schema__item-icon::before {
+        display: none;
+      }
+    }
+
     @media screen and (max-width: 576px) {
       flex-basis: 0px;
     }

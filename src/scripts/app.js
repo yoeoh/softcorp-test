@@ -113,12 +113,10 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("schema").getElementsByClassName("schema__item")
   );
 
-  if (schemaItems.length > 5) {
-    schemaItems.forEach((item, index) => {
+  if (schemaItems.length < 2) {
+    schemaItems.forEach((item) => {
       const itemIcon = item.querySelector(".schema__item-icon");
-      if ((index + 1) % 5 === 0) {
-        itemIcon.classList.add("nobefore");
-      }
+      itemIcon.classList.add("nobefore");
     });
   }
 });
