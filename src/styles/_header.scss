@@ -1,7 +1,7 @@
 .header {
   background-color: rgba(16, 16, 29, 0.9);
   height: $header-height;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -9,9 +9,12 @@
   transition: all 0.1s ease-out;
 
   &__compact {
-    position: fixed;
     height: $header-compact;
     transition: all 0.1s ease-in;
+  }
+
+  @media screen and (max-width: 576px) {
+    height: $header-compact;
   }
 
   &__logo {
