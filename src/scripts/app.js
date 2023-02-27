@@ -20,20 +20,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
   const hero = document.getElementById("hero");
 
-  const options = {
-    threshold: 1,
-    // rootMargin: "",
-  };
-
-  const heroObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        header.classList.add("header__compact");
-      } else {
-        header.classList.remove("header__compact");
-      }
-    });
-  }, options);
+  const heroObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          header.classList.add("header__compact");
+        } else {
+          header.classList.remove("header__compact");
+        }
+      });
+    },
+    {
+      threshold: 1,
+      // rootMargin: "",
+    }
+  );
 
   heroObserver.observe(hero);
 
@@ -78,4 +79,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
   burgerButton.addEventListener("click", () => openBurgerMenu());
   burgerCloseButton.addEventListener("click", () => closeBurgerMenu());
+
+  // fade-in animations
+  const animatedItemsArray = Array.from(
+    document.querySelectorAll("[data-animated]")
+  );
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        entry.target.classList.add("transparent");
+
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animation-fadeinleft");
+          entry.target.classList.remove("transparent");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  animatedItemsArray.forEach((item) => {
+    observer.observe(item);
+  });
 });

@@ -29,3 +29,11 @@
     opacity: 0;
   }
 }
+
+.transparent {
+  opacity: 0;
+}
+
+.animation-fadeinleft {
+  animation: fadeInLeft 1.5s;
+}
