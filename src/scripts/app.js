@@ -18,25 +18,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // sticky header with changing style
   const header = document.getElementById("header");
-  const hero = document.getElementById("hero");
 
-  const heroObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) {
-          header.classList.add("header__compact");
-        } else {
-          header.classList.remove("header__compact");
-        }
-      });
-    },
-    {
-      threshold: 1,
-      // rootMargin: "",
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    if (currentScroll > 0) {
+      header.classList.add("header__compact");
+    } else {
+      header.classList.remove("header__compact");
     }
-  );
-
-  heroObserver.observe(hero);
+  });
 
   // burger menu with copy of main menu
   const burgerButton = document.getElementById("burger-menu-button");
@@ -107,16 +98,4 @@ document.addEventListener("DOMContentLoaded", () => {
   animatedItemsArray.forEach((item) => {
     observer.observe(item);
   });
-
-  // schema
-  const schemaItems = Array.from(
-    document.getElementById("schema").getElementsByClassName("schema__item")
-  );
-
-  if (schemaItems.length < 2) {
-    schemaItems.forEach((item) => {
-      const itemIcon = item.querySelector(".schema__item-icon");
-      itemIcon.classList.add("nobefore");
-    });
-  }
 });
